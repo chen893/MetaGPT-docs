@@ -106,7 +106,7 @@ const hasData = (d) => {
 
 const calGap = (count) => {
   const maxw = document.body.clientWidth - 600;
-  return Math.max((maxw - count * 60) / count, 10);
+  return Math.max((maxw - count * 40) / count, 8);
 };
 
 const prev = () => {
@@ -600,7 +600,7 @@ watch(
 .ballgraph {
   display: flex;
   flex-direction: column;
-  gap: 300px;
+  gap: 160px;
   position: relative;
   flex: 1;
 }
@@ -620,11 +620,11 @@ watch(
 }
 
 .ball {
-  height: 60px;
-  width: 60px;
-  border-radius: 20px;
+  height: 40px;
+  width: 40px;
+  border-radius: 12px;
   background-color: #d4d4d4;
-  font-size: 25px;
+  font-size: 14px;
   color: #fff;
   display: flex;
   justify-content: center;
