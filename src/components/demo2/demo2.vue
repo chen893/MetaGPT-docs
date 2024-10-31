@@ -41,9 +41,9 @@ const list = computed(() => {
 
   const newList = trees.value;
 
-  const scores = newList[newList.length - 1]?.map((_) =>
-    Number(_.dev_score)
-  ) || [0, 100];
+  const scores = newList[newList.length - 1]
+    ?.filter((item) => item.visits >= 1)
+    ?.map((_) => Number(_.dev_score)) || [0, 100];
   maxScore = Math.max(...scores);
   minScore = Math.min(...scores);
   return newList;
